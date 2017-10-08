@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RetailStore</string>
+    <string name="sort_by_furniture">Sort by Furniture</string>
+    <string name="sort_by_electronics">Sort by Electronics</string>
+    <string name="price">₹%1$s</string>
+    <string name="no_internet">Internet connection appears to be offline \n Sync again.</string>
+</resources>

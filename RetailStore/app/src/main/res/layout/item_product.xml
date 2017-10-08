@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="productViewModel"
+            type="com.mobiquityinc.retailstore.viewmodel.ItemProductViewModel"/>
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        >
+
+    <LinearLayout
+        android:id="@+id/itemProduct"
+        android:orientation="vertical"
+        android:onClick="@{productViewModel::onItemClick}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            tools:imageUrl="@{productViewModel.productImage}"
+            android:layout_height="100dp"/>
+
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:ellipsize="end"
+            android:text="@{productViewModel.productName}"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="match_parent"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="@{String.format(@string/price,productViewModel.productPrice)}"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="offline_textview_padding">8dp</dimen>
+    <dimen name="size_text_offline">15sp</dimen>
+</resources>
